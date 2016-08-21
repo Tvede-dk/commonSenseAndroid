@@ -78,7 +78,7 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject put(@NonNull String name, double value) throws JSONException {
+    public JSONObject put(@NonNull String name, double value) {
         try {
             super.put(name, value);
         } catch (JSONException e) {
@@ -88,7 +88,7 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject put(@NonNull String name, int value) throws JSONException {
+    public JSONObject put(@NonNull String name, int value) {
         try {
             super.put(name, value);
         } catch (JSONException e) {
@@ -98,7 +98,7 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject put(@NonNull String name, long value) throws JSONException {
+    public JSONObject put(@NonNull String name, long value) {
         try {
             super.put(name, value);
         } catch (JSONException e) {
@@ -108,7 +108,7 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject put(@NonNull String name, @NonNull Object value) throws JSONException {
+    public JSONObject put(@NonNull String name, @NonNull Object value) {
         try {
             super.put(name, value);
         } catch (JSONException e) {
@@ -118,7 +118,7 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject putOpt(@NonNull String name, @NonNull Object value) throws JSONException {
+    public JSONObject putOpt(@NonNull String name, @NonNull Object value) {
         try {
             super.putOpt(name, value);
         } catch (JSONException e) {
