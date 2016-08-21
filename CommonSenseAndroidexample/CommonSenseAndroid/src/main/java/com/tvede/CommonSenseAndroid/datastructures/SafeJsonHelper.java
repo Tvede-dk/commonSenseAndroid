@@ -108,7 +108,10 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject put(@NonNull String name, @NonNull Object value) {
+    public JSONObject put(@NonNull String name, @Nullable Object value) {
+        if (value == null) {
+            return this;
+        }
         try {
             super.put(name, value);
         } catch (JSONException e) {
@@ -118,7 +121,10 @@ public class SafeJsonHelper extends JSONObject {
     }
 
     @Override
-    public JSONObject putOpt(@NonNull String name, @NonNull Object value) {
+    public JSONObject putOpt(@NonNull String name, @Nullable Object value) {
+        if (value == null) {
+            return this;
+        }
         try {
             super.putOpt(name, value);
         } catch (JSONException e) {
